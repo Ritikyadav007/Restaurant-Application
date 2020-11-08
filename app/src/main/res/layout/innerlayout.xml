@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="RestaurantBinding">
+
+        <variable
+            name="restaurantmodel"
+            type='com.example.restaurantapp.viewmodel.RestaurantViewModel' />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/purple_200">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{restaurantmodel.name}"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{restaurantmodel.address}"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{restaurantmodel.speciality}"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{restaurantmodel.rating}"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</layout>
